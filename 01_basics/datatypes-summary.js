@@ -46,3 +46,39 @@ const myFunction = function(){
 
 console.log(typeof heroes); // object
 
+
+
+// *********************    MEMORY     ************************************
+
+/* 
+ Stack (Primitive dataype) and gives the copy of the original one
+
+
+ Heap (Non - Primitive datatype) , gives the reference to the original one
+
+
+
+*/
+
+let name1 = "Anmol verma"
+
+let anotherName = name1  // creates a copy
+console.log(anotherName);  // Anmol verma
+
+anotherName = "Harshit verma"
+console.log(anotherName);  // Harshit Verma
+console.log(name1)  // Anmol verma
+
+
+let user = {
+    email :"anmol@gmai.com",
+    age : 22,
+}
+
+//  mark this all the information in heap and stores the location of this stored info in the stack
+
+let userTwo = user  // makes a reference to the same user object and if we change anything in this also affects the original one.
+
+userTwo.email = "harshit@gmail.com"
+
+console.log(user.email);  // harshit@gmail.com
