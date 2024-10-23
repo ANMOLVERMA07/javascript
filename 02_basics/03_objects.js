@@ -17,8 +17,11 @@ const regularUser = {
     }
 }
 
+console.log(regularUser.fullname);   // { userFullName: { firstName: ' anmol', lastName: 'verma' } }
 
+console.log(regularUser.fullname.userFullName);   //   { firstName: ' anmol', lastName: 'verma' }
 
+console.log(regularUser.fullname.userFullName.firstName);  // anmol
 
 
 
@@ -57,3 +60,22 @@ console.log(Object.entries(tinderUser));  //   [ [ 'id', '123' ], [ 'name', 'Anm
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));    // true
  
+
+
+// new
+
+const course = {
+    coursename : "javascript",
+    price : 999,
+    courseInstructor : "anmol",
+}
+
+//  course.courseInstructor
+
+// const {courseInstructor} = course;      // another way of accessing the value inside a object
+
+// console.log(courseInstructor);   //  anmol
+
+
+const {courseInstructor : instructor} = course; // changing the variable name as per our needs
+console.log(instructor);   //  anmol
